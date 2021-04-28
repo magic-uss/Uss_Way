@@ -1,0 +1,15 @@
+@mixin list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin container-desktop {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+@mixin container-mobile {
+  max-width: 767px;
+  padding: 0 15px;
+}

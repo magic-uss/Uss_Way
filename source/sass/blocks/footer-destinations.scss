@@ -1,0 +1,101 @@
+.footer-destinations__list {
+  @include list;
+
+  &:not(:last-child) {
+    margin-right: 50px;
+  }
+
+  @media (max-width: $tablet) {
+    padding-right: 7px;
+
+    &:not(:last-child) {
+      margin-right: 40px;
+    }
+  }
+
+  @media (max-width: $mobile) {
+    &:not(:last-child) {
+      margin-right: 0;
+    }
+
+    &:last-child {
+      margin: 16px 30px 0;
+    }
+  }
+}
+
+.footer-destinations__list-wrapper {
+  display: flex;
+
+  @media (max-width: $mobile) {
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+}
+
+.footer-destinations__link {
+  font-size: 14px;
+  line-height: 17px;
+  color: transparentize($darkest, 0.5);
+  text-decoration: none;
+
+  &:hover {
+    color: $basic;
+  }
+
+  &:focus,
+  &:active {
+    color: $basic;
+    opacity: 0.6;
+  }
+}
+
+.footer-destinations__item {
+  line-height: 17px;
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  @media (max-width: $mobile) {
+    text-align: center;
+  }
+}
+
+.footer-destinations {
+  position: relative;
+  width: 402px;
+  padding-left: 13px;
+  box-sizing: border-box;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1px;
+    height: 96%;
+    background-color: $grey;
+  }
+
+  @media (max-width: $tablet) {
+    width: 416px;
+    padding-left: 21px;
+  }
+
+  @media (max-width: $mobile) {
+    width: 320px;
+    margin-bottom: 30px;
+    padding-bottom: 19px;
+    padding-left: 0;
+
+    &::after {
+      top: auto;
+      right: auto;
+      bottom: 0;
+      left: 10px;
+      width: 90%;
+      height: 1px;
+    }
+  }
+}

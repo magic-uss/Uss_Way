@@ -1,0 +1,53 @@
+.message-wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.message__wrapper-show {
+  display: flex;
+}
+
+.message {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 728px;
+  height: 444px;
+  background-color: $light-grey;
+}
+
+.message__title {
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 43px;
+  text-align: center;
+  color: $dark-grey;
+}
+
+.message__close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 22px;
+  height: 22px;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 22px;
+    height: 22px;
+    background: url("../img/close-icon.svg") 0 0 no-repeat;
+  }
+}

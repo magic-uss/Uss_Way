@@ -1,0 +1,281 @@
+.countries__tab-list {
+  @include list;
+
+  display: flex;
+  justify-content: space-between;
+  max-width: 900px;
+  margin-bottom: 80px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid transparentize($dark, 0.7);
+
+  @media (max-width: $tablet) {
+    width: 117%;
+    margin: 0 37px 24px;
+  }
+
+  @media (max-width: $mobile) {
+    width: 305px;
+    margin: 0 15px 0;
+    box-sizing: border-box;
+  }
+}
+
+.countries__tab-item {
+  @media (max-width: $mobile) {
+    &:not(:last-child) {
+      margin-right: 100px;
+    }
+  }
+}
+
+.countries__tab-item-link {
+  display: block;
+  padding: 10px 0;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: -0.4px;
+  color: transparentize($dark, 0.7);
+  text-decoration: none;
+  cursor: pointer;
+
+  &--current,
+  &:hover {
+    color: $basic;
+  }
+
+  &:focus,
+  &:active {
+    color: $basic;
+    opacity: 0.6;
+  }
+}
+
+.countries {
+  height: 1233px;
+  margin-top: -14px;
+  background: url("../img/countries-bg-desktop.svg") center 144px no-repeat;
+
+  @media (max-width: $tablet) {
+    height: auto;
+    margin-top: 0;
+    background: none;
+  }
+
+  @media (max-width: $mobile) {
+    width: 100%;
+  }
+}
+
+.countries__list {
+  @include list;
+}
+
+.countries__item-title {
+  position: relative;
+  margin: 9px 0 30px;
+  padding-bottom: 18px;
+  font-weight: 600;
+  font-size: 55px;
+  line-height: 90px;
+  letter-spacing: -1.25px;
+  color: $dark;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 175px;
+    height: 3px;
+    background-color: $basic;
+  }
+
+  @media (max-width: $tablet) {
+    padding-bottom: 0;
+    margin-bottom: 20px;
+    font-size: 30px;
+    line-height: 45px;
+    letter-spacing: normal;
+    text-align: center;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  @media (max-width: $mobile) {
+    margin-top: 24px;
+    font-size: 24px;
+    line-height: 36px;
+  }
+}
+
+.countries__item-information {
+  margin: 0 0 50px;
+  letter-spacing: -0.5px;
+  color: transparentize($dark, 0.3);
+
+  @media (max-width: $tablet) {
+    margin-bottom: 20px;
+    padding: 0 20px;
+    text-align: center;
+  }
+
+  @media (max-width: $mobile) {
+    padding: 0;
+  }
+}
+
+.countries__item-button {
+  width: 250px;
+
+  @media (max-width: $tablet) {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  @media (max-width: $mobile) {
+    width: 288px;
+  }
+}
+
+.countries__item {
+  display: none;
+
+  &--current {
+    display: flex;
+  }
+
+  @media (max-width: $tablet) {
+    position: relative;
+    flex-direction: column;
+  }
+}
+
+.countries__feedback {
+  align-self: flex-start;
+  width: 382px;
+  margin: 114px 0 0 -112px;
+  padding: 30px;
+  box-sizing: border-box;
+  background-color: $white;
+
+  @media (max-width: $tablet) {
+    position: absolute;
+    left: calc(100% / 2 - 191px);
+    bottom: -32px;
+    margin: 0;
+  }
+
+  @media (max-width: $mobile) {
+    left: calc(100% / 2 - 134px);
+    bottom: -62px;
+    width: 268px;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+
+.countries__about-country {
+  width: 370px;
+  margin-right: 100px;
+
+  @media (max-width: $tablet) {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: $mobile) {
+    margin-bottom: 50px;
+    padding: 0 15px;
+    box-sizing: border-box;
+  }
+}
+
+.countries__item-image {
+  display: block;
+  height: 596px;
+
+  @media (max-width: $tablet) {
+    width: 768px;
+    height: 415px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: $mobile) {
+    width: 320px;
+  }
+}
+
+.countries__feedback-title {
+  position: relative;
+  margin: 0 0 20px;
+  padding-bottom: 13px;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 37px;
+  letter-spacing: -0.7px;
+  color: $dark;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 68px;
+    height: 1px;
+    background-color: $basic;
+  }
+
+  @media (max-width: $mobile) {
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+
+    &::after {
+      left: 80px;
+      width: 68px;
+    }
+  }
+}
+
+.countries__feedback-information {
+  margin: 0;
+}
+
+.countries__feedback-text {
+  margin: 0 0 31px;
+  font-size: 14px;
+  letter-spacing: -0.4px;
+  color: transparentize($dark, 0.3);
+
+  @media (max-width: $mobile) {
+    margin-bottom: 17px;
+    text-align: center;
+  }
+}
+
+.countries__feedback-author {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: -0.5px;
+  font-style: normal;
+  color: $dark;
+
+  @media (max-width: $mobile) {
+    flex-direction: column;
+    padding-left: 8px;
+  }
+}
+
+.countries__feedback-image {
+  margin-right: 16px;
+
+  @media (max-width: $mobile) {
+    margin-bottom: 10px;
+  }
+}

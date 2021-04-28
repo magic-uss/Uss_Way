@@ -1,0 +1,39 @@
+.page-footer {
+  min-height: 270px;
+
+  @media (max-width: $tablet) {
+    width: 100%;
+  }
+}
+
+.page-footer__title {
+  margin: 0 0 20px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 32px;
+  color: $darkest;
+
+  @media (max-width: $mobile) {
+    padding-right: 10px;
+    text-align: center;
+  }
+}
+
+.page-footer__inner {
+  @include container-desktop;
+
+  display: flex;
+
+  @media (max-width: $tablet) {
+    flex-wrap: wrap;
+    max-width: none;
+    width: 768px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+  }
+
+  @media (max-width: $mobile) {
+    width: 320px;
+    padding-bottom: 25px;
+  }
+}

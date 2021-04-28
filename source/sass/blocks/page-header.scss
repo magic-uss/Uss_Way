@@ -1,0 +1,63 @@
+.page-header {
+  min-height: 99px;
+
+  @media (max-width: $tablet) {
+    min-height: 50px;
+  }
+}
+
+.page-header__inner {
+  @include container-desktop;
+
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 100%;
+
+  @media (max-width: $tablet) {
+    max-width: none;
+    width: 100%;
+  }
+}
+
+.page-header__telephone-link {
+  display: flex;
+  align-items: center;
+  margin: 5px 5px 0 20px;
+  padding: 10px;
+  font-size: 18px;
+  line-height: 32px;
+  color: $darkest;
+
+  &:hover {
+    color: $basic;
+  }
+
+  &:focus,
+  &:active {
+    color: $basic;
+    opacity: 0.6;
+  }
+
+  @media (max-width: $tablet) {
+    display: none;
+  }
+}
+
+.page-header__logo {
+  margin-right: auto;
+
+  @media (max-width: $tablet) {
+    width: 44px;
+    height: 17px;
+    margin-left: 21px;
+  }
+
+  @media (max-width: $mobile) {
+    margin-left: 16px;
+  }
+}
+
+.page-header__telephone-icon {
+  margin-right: 16px;
+}
